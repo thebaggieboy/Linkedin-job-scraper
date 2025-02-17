@@ -26,53 +26,45 @@ pandas: For data manipulation and saving job data into Excel format.
 openpyxl: Required by pandas for Excel support.
 # You can install all dependencies by running:
 
-bash
-Copy
-Edit
-pip install undetected-chromedriver selenium pandas openpyxl
-Setup
-1. Clone the Repository
-First, clone the repository to your local machine using Git.
 
-bash
-Copy
-Edit
+pip install undetected-chromedriver selenium pandas openpyxl
+
+Setup
+# 1. Clone the Repository
+First, clone the repository to your local machine using Git.
 git clone https://github.com/yourusername/linkedin-job-scraper.git
+
 cd linkedin-job-scraper
-2. Set Up Your LinkedIn Login
+# 2. Set Up Your LinkedIn Login
 Update the email and password variables in the linkedin_job_scraper.py script with your LinkedIn login credentials:
 
-python
-Copy
-Edit
+
 EMAIL = "your_email_here@gmail.com"
 PASSWORD = "your_password_here"
-3. Configure Search Terms
+
+# 3. Configure Search Terms
 Update the SEARCH_TERMS list with the job titles you're interested in scraping. For example:
 
-python
-Copy
-Edit
+
 SEARCH_TERMS = [
     "Fullstack Developer remote",
     "Python Developer remote",
     "Software Engineer remote"
 ]
+
 Running the Script
-1. Start the Script
+#1. Start the Script
 After ensuring the necessary dependencies are installed and your login credentials are set, run the script with the following command:
 
-bash
-Copy
-Edit
+
 python linkedin_job_scraper.py
-2. How It Works
+# 2. How It Works
 The script will open LinkedIn's login page and log in using the provided credentials.
 It will loop through the list of search terms, opening each job search in a new browser tab.
 The script will scroll through the job listings and collect job data such as title, company, location, salary, and link.
 After collecting the job data, it will print the list of jobs to the terminal and save the data to an Excel file named linkedin_jobs.xlsx.
 The browser will remain open, allowing you to manually inspect the job listings.
-Customization
+# Customization
 Search Terms: Update the SEARCH_TERMS list to search for different job titles or remote work.
 Excel Output: The script saves job listings to an Excel file. You can modify the output file name and format as needed.
 Job Details: The script currently captures basic job details (title, company, location, salary, and link). You can modify the code to capture more details if necessary.
@@ -94,7 +86,7 @@ Use rotating proxies if scraping a large number of listings to avoid IP bans.
 Contributing
 Feel free to submit pull requests, report issues, or suggest features. If you encounter any bugs or have suggestions for improvements, please open an issue on GitHub.
 
-License
+#License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Acknowledgments
